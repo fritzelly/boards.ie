@@ -1,0 +1,54 @@
+// Delete the one you won't be using
+// For 12 hour clock
+$(".postbit-header time").each(function(index) {
+  $(this).text($(this).attr("title"));
+});
+// For 24 hour clock
+$(".postbit-header time").each(function(index) {
+dt=new Date($(this).attr("datetime")).toString()
+$(this).text(dt.substring(0,21))
+});
+
+
+
+// Courtesy of
+$('#Form_Comment').submit(function(){
+    if (!$('.Bookmark').eq(0).hasClass('Bookmarked')) {
+        $('.Bookmark').eq(0).click();
+    }
+});
+$(".ReactButton-Like .Count").each(function(index) {
+	postid=$(this).closest("li").attr("id")
+	post_id=postid.split("_")
+	post_id=post_id[1]
+	$("<div id='thanks_"+post_id+"' style='margin-left: 246px !important;background:#fff;padding:10px;color:#c12525'>Thanks by: </div>" ).insertAfter($(this).closest(".postbit-wrapper"));
+$.ajax({ url: "https://boards.ie/reactions/users/Comment/"+post_id+"/like?DeliveryType=VIEW",
+      method: "GET",
+      custom: post_id })
+.done( function(data, textStatus, jqXHR) {
+	var postID = this.custom; 
+	$(data).find('li a').each(function(index) {
+		if($(this).attr("title")!=undefined){
+			$('#thanks_'+ postID).append($(this).attr("title")+", ");
+	}})
+});});
+
+$(window).load(function() {
+$(".embedExternal-content:has(article)").addClass("userShadow")
+});
+
+$(".ItemComment").each(function(index) {
+$("<div style='float:right'><a href='https://boards.ie/discussion/comment/>"+ $(this).attr("id") +"'</a></div>" ).insertAfter($(this).next("time"));
+});
+
+$(".ItemComment").each(function(index) {
+post_id=$(this).attr("id").split("_")
+$("<div class='post_link_ref'><a href='https://boards.ie/discussion/comment/"+ post_id[1]+"#"+$(this).attr("id")+"'>"+post_id[1] +"</a></div>").appendTo($(this).find(".postbit-header"))
+});
+$(".forum-threadlist-table tr").each(function(index) {
+unread = $(this).find("strong.HasNew")
+if(unread.length<1){
+	$(this).find(".threadbit-threadlink").removeClass("unread")
+}
+$(this).find("strong").remove()
+});

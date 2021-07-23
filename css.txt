@@ -1,0 +1,59 @@
+.Section-Discussion .Content .pageBox .pageBox .pageBox::after{height:0 !important}
+.Section-Discussion .Content .pageBox .pageBox .pageBox::before{height:0 !important}
+#PagerAfter a,#PagerAfter span ,.MessageList .ItemComment .Item-BodyWrap, .MessageList .ItemDiscussion .Item-BodyWrap{border:0}
+
+#Item_0 h1 {
+    font-size: 20px !important;
+    padding-bottom: 10px;
+}
+.ReactButton.PopupWindow,.Panel.Panel-main {
+    display: none !important;
+}
+.postbit-message {
+    padding-top: 5px !important;
+}
+.Content.MainContent {
+    width: 100% !important;
+}
+.Section-Discussion .Content .pageBox .pageBox::before{height:0em}
+.js-embed.embedResponsive > div
+{margin:0 !important;}
+
+.postbit-postbody{background:#fafafa !important}
+.pageHeadingBox h2 {font-size:20px !important;}
+.richEditor-textWrap.ql-container{
+	flex-direction: inherit !important;
+}
+
+.Message.userContent {font-size:14px !important}
+.postbit-postdetails {
+	border-right:1px solid #a6a6a6;
+	border-left:1px solid #a6a6a6;
+}
+.js-embed.embedResponsive [class*="userLabel-compact"] {
+    border-bottom: 1px solid !important;
+}
+.userContent.userContent > p:not(:first-child), .UserContent.UserContent > p:not(:first-child){margin:0 !important}
+
+.userContent.userContent.userContent.userContent > :not(:last-child):not(.embedResponsive), .UserContent.UserContent.UserContent.UserContent > :not(:last-child):not(.embedResponsive){margin:0 !important}
+
+.pre-header{position: fixed;}
+.BreadcrumbsBox{position: fixed !important; width: 100%; top: 68px;height: 20px;}
+#titleBar{position: fixed; top: 20px; width: 100%;}
+.Container{margin-top:70px}
+
+.userShadow{
+border:1px solid #c4c4c4;
+box-shadow: 5px 5px #c4c4c4;
+margin-bottom: 20px !important;
+}
+
+.MessageForm.CommentForm.FormTitleWrapper.Role_RegisteredUsersCommentFormWrap.pageBox {padding-left:30px;}
+
+
+.post_link_ref, .post_link_ref a {
+	float:right;
+	color:#fff;
+	    font-size: 12px;
+}
+.Item-Body a {text-decoration:underline !important}
